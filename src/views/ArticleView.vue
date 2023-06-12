@@ -4,7 +4,7 @@ import {GetArticleBySlug} from "@/queries/getArticleBySlug";
 export default {
   data() {
     return {
-      Article: '',
+      Article: null,
     }
   },
   apollo: {
