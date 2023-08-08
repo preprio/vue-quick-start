@@ -1,7 +1,7 @@
-# vue-quick-start
+# Vue Quick Start
 The Vue quick start project launches a blog app with content from Prepr.
 
-[Stackblitz demo](https://stackblitz.com/edit/vue-quick-start)
+Check out the [Stackblitz demo](https://stackblitz.com/edit/vue-quick-start) for zero installation.
 
 ## Setup
 
