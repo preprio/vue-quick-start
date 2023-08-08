@@ -1,6 +1,6 @@
 
 <script>
-import {GetArticles} from "@/queries/getArticles";
+import {GetArticles} from "@/queries/get-articles";
 export default {
   apollo: {
     Articles: GetArticles
