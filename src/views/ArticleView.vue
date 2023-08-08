@@ -1,5 +1,5 @@
 <script>
-import {GetArticleBySlug} from "@/queries/getArticleBySlug";
+import {GetArticleBySlug} from "@/queries/get-article-by-slug";
 
 export default {
   data() {
