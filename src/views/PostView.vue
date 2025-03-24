@@ -1,15 +1,15 @@
 <script>
-import {GetArticleBySlug} from "@/queries/get-article-by-slug";
+import {GetPostBySlug} from "@/queries/get-post-by-slug";
 
 export default {
   data() {
     return {
-      Article: null,
+      Post: null,
     }
   },
   apollo: {
-    Article: {
-      query: GetArticleBySlug,
+    Post: {
+      query: GetPostBySlug,
       variables () {
         return {
           slug: this.$route.params.slug
@@ -21,16 +21,16 @@ export default {
 </script>
 
 <template>
-  <h1>{{Article.title}}</h1>
+  <h1>{{Post.title}}</h1>
 
-  <div :key="contentType._id" v-for="contentType in Article.content">
+  <div :key="contentType._id" v-for="contentType in Post.content">
 
     <!-- Display images if they exist -->
     <div v-if="contentType.__typename === 'Assets'" class="my-10">
       <img
           v-if="contentType.items.length"
           :src="contentType.items[0]?.url"
-          :alt="`Image for ${Article.title}`"
+          :alt="`Image for ${Post.title}`"
           width="300"
           height="250"
       />

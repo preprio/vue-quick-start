@@ -1,13 +1,13 @@
 
 <script>
-import {GetArticles} from "@/queries/get-articles";
+import {GetPosts} from "@/queries/get-posts";
 export default {
   apollo: {
-    Articles: GetArticles
+    Posts: GetPosts
   },
   data() {
     return {
-      Articles: ''
+      Posts: ''
     }
   },
 }
@@ -17,9 +17,9 @@ export default {
   <div>
     <h1>My blog site</h1>
 
-    <ul v-if="Articles">
-      <li v-for="article in Articles.items" :key="article._id">
-        <router-link :to="article._slug">{{article.title}}</router-link>
+    <ul v-if="Posts">
+      <li v-for="post in Posts.items" :key="post._id">
+        <router-link :to="post._slug">{{post.title}}</router-link>
       </li>
     </ul>
   </div>
