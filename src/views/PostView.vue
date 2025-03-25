@@ -23,6 +23,13 @@ export default {
 <template>
   <h1>{{Post.title}}</h1>
 
+    <div class="my-10">
+        <img
+            :src="Post.cover.url"
+            :alt="`Image for ${Post.title}`"
+        />
+    </div>
+
   <div :key="contentType._id" v-for="contentType in Post.content">
 
     <!-- Display images if they exist -->
@@ -31,8 +38,6 @@ export default {
           v-if="contentType.items.length"
           :src="contentType.items[0]?.url"
           :alt="`Image for ${Post.title}`"
-          width="300"
-          height="250"
       />
     </div>
 
