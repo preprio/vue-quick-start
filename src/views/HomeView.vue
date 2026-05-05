@@ -19,7 +19,7 @@ export default {
 
     <ul v-if="Posts">
       <li v-for="post in Posts.items" :key="post._id">
-        <router-link :to="post._slug">{{post.title}}</router-link>
+        <router-link :to="`/${post._slug}`">{{post.title}}</router-link>
       </li>
     </ul>
   </div>
