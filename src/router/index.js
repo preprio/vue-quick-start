@@ -11,7 +11,7 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/:slug',
+      path: '/blog/:slug',
       name: 'post',
       component: PostView
     }

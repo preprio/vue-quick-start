@@ -12,7 +12,7 @@ export default {
       query: GetPostBySlug,
       variables () {
         return {
-          slug: this.$route.params.slug
+          slug: `blog/${this.$route.params.slug}`
         }
       }
     }
