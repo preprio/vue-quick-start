@@ -22,5 +22,8 @@
     "@rushstack/eslint-patch": "^1.16.1",
     "@vitejs/plugin-vue": "^4.6.2",
     "vite": "^4.5.14"
+  },
+  "overrides": {
+    "serialize-javascript": ">=7.0.5"
   }
 }
