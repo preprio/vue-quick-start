@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
   },
   "dependencies": {
     "@apollo/client": "^4.2.0",
@@ -16,9 +18,13 @@
     "vue-router": "^5.0.4"
   },
   "devDependencies": {
+    "@rushstack/eslint-patch": "^1.16.1",
     "@vitejs/plugin-vue": "^6.0.6",
     "vite": "^8.0.8",
     "vite-plugin-vue-devtools": "^8.1.1"
+  },
+  "overrides": {
+    "serialize-javascript": ">=7.0.5"
   },
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
