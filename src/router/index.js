@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import PostView from "@/views/PostView.vue";
+import HomeView from '@/views/HomeView.vue'
+import PostView from '@/views/PostView.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -8,14 +8,14 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
     },
     {
       path: '/blog/:slug',
       name: 'post',
-      component: PostView
-    }
-  ]
+      component: PostView,
+    },
+  ],
 })
 
 export default router

@@ -1,27 +1,23 @@
+<script setup>
+import { ref, onMounted } from 'vue'
+import apolloClient from '@/services/apollo-client'
+import { GetPosts } from '@/queries/get-posts'
 
-<script>
-import {GetPosts} from "@/queries/get-posts";
-export default {
-  apollo: {
-    Posts: GetPosts
-  },
-  data() {
-    return {
-      Posts: ''
-    }
-  },
-}
+const posts = ref([])
+
+onMounted(async () => {
+  const { data } = await apolloClient.query({ query: GetPosts })
+  posts.value = data.Posts.items
+})
 </script>
 
 <template>
   <div>
     <h1>My blog site</h1>
-
-    <ul v-if="Posts">
-      <li v-for="post in Posts.items" :key="post._id">
-        <router-link :to="`/${post._slug}`">{{post.title}}</router-link>
+    <ul v-if="posts.length">
+      <li v-for="post in posts" :key="post._id">
+        <router-link :to="`/${post._slug}`">{{ post.title }}</router-link>
       </li>
     </ul>
   </div>
 </template>
-

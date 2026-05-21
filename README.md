@@ -3,19 +3,17 @@ The Vue quick start project launches a blog app with content from Prepr.
 
 Check out the [Stackblitz demo](https://stackblitz.com/edit/vue-quick-start) for zero installation.
 
+## Prerequisites
+
+- Node.js `^20.19.0` or `>=22.12.0`
+- A Prepr account with an access token
+
 ## Setup
 
 Make sure to install the dependencies:
 
 ```bash
-# yarn
-yarn install
-
-# npm
 npm install
-
-# pnpm
-pnpm install --shamefully-hoist
 ```
 
 ## Add the environment file
@@ -25,7 +23,7 @@ cp .env.example .env
 ```
 
 ## Update the environment file
-In the .env file replace `<YOUR-ACCESS-TOKEN>` with the Prepr access token from your environment with demo content.
+In the .env file replace `<YOUR_ACCESS_TOKEN>` with the Prepr access token from your environment with demo content.
 
 ## Development Server
 
@@ -54,4 +52,3 @@ Check out the [deployment documentation](https://cli.vuejs.org/guide/deployment.
 ## The end result
 
 ![blog site end result](https://assets-site.prepr.io/6eqxbjrigrdt//vuejs-blog-posts-result.png)
-
