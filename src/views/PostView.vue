@@ -1,50 +1,43 @@
-<script>
-import {GetPostBySlug} from "@/queries/get-post-by-slug";
+<script setup>
+import { ref, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+import apolloClient from '@/services/apollo-client'
+import { GetPostBySlug } from '@/queries/get-post-by-slug'
 
-export default {
-  data() {
-    return {
-      Post: null,
-    }
-  },
-  apollo: {
-    Post: {
-      query: GetPostBySlug,
-      variables () {
-        return {
-          slug: `blog/${this.$route.params.slug}`
-        }
-      }
-    }
-  },
-}
+const route = useRoute()
+const post = ref(null)
+
+onMounted(async () => {
+  const { data } = await apolloClient.query({
+    query: GetPostBySlug,
+    variables: { slug: `blog/${route.params.slug}` },
+  })
+  post.value = data.Post
+})
 </script>
 
 <template>
-  <h1>{{Post.title}}</h1>
+  <div v-if="post">
+    <h1>{{ post.title }}</h1>
 
     <div class="my-10">
-        <img
-            :src="Post.cover.url"
-            :alt="`Image for ${Post.title}`"
-        />
+      <img :src="post.cover.url" :alt="`Image for ${post.title}`" />
     </div>
 
-  <div :key="contentType._id" v-for="contentType in Post.content">
-
-    <!-- Display images if they exist -->
-    <div v-if="contentType.__typename === 'Assets'" class="my-10">
-      <img
+    <div v-for="contentType in post.content" :key="contentType._id">
+      <!-- Display images if they exist -->
+      <div v-if="contentType.__typename === 'Assets'" class="my-10">
+        <img
           v-if="contentType.items.length"
           :src="contentType.items[0]?.url"
-          :alt="`Image for ${Post.title}`"
-      />
-    </div>
-
-    <!--Display the text in HTML format -->
-    <div
+          :alt="`Image for ${post.title}`"
+        />
+      </div>
+      <!-- Display the text in HTML format -->
+      <div
         v-if="contentType.__typename === 'Text'"
         v-html="contentType.body"
-    ></div>
+      ></div>
+    </div>
   </div>
 </template>
