@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@apollo/client':
-        specifier: ^4.2.0
-        version: 4.2.0(graphql@16.14.0)(rxjs@7.8.2)
+        specifier: ^4.2.1
+        version: 4.2.1(graphql@16.14.0)(rxjs@7.8.2)
       graphql:
         specifier: ^16.14.0
         version: 16.14.0
@@ -24,6 +24,9 @@ importers:
         specifier: ^5.0.4
         version: 5.0.7(@vue/compiler-sfc@3.5.34)(vue@3.5.34)
     devDependencies:
+      '@rushstack/eslint-patch':
+        specifier: ^1.16.1
+        version: 1.16.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.6
         version: 6.0.7(vite@8.0.14(yaml@2.9.0))(vue@3.5.34)
@@ -36,8 +39,8 @@ importers:
 
 packages:
 
-  '@apollo/client@4.2.0':
-    resolution: {integrity: sha512-uZAiXwIRidDqQKZRcL88O01IVZjY6IhLio6g+XzX4N4++Ue9pVK9WCoZvBm1dvx+x2mH0oGfVUZvTvacCW4WcQ==}
+  '@apollo/client@4.2.1':
+    resolution: {integrity: sha512-jYZak+1dqij4fYAuN77f+9OQukelMJwRf3C/KYEZsE/ifDfyKgzWcEOk3IlEisJz8UPRP1HkRo5DFrYZgz6PHg==}
     peerDependencies:
       graphql: ^16.0.0
       graphql-ws: ^5.5.5 || ^6.0.3
@@ -349,6 +352,9 @@ packages:
 
   '@rolldown/pluginutils@1.0.1':
     resolution: {integrity: sha512-2j9bGt5Jh8hj+vPtgzPtl72j0yRxHAyumoo6TNfAjsLB04UtpSvPbPcDcBMxz7n+9CYB0c1GxQFxYRg2jimqGw==}
+
+  '@rushstack/eslint-patch@1.16.1':
+    resolution: {integrity: sha512-TvZbIpeKqGQQ7X0zSCvPH9riMSFQFSggnfBjFZ1mEoILW+UuXCKwOoPcgjMwiUtRqFZ8jWhPJc4um14vC6I4ag==}
 
   '@tybys/wasm-util@0.10.2':
     resolution: {integrity: sha512-RoBvJ2X0wuKlWFIjrwffGw1IqZHKQqzIchKaadZZfnNpsAYp2mM0h36JtPCjNDAHGgYez/15uMBpfGwchhiMgg==}
@@ -921,7 +927,7 @@ packages:
 
 snapshots:
 
-  '@apollo/client@4.2.0(graphql@16.14.0)(rxjs@7.8.2)':
+  '@apollo/client@4.2.1(graphql@16.14.0)(rxjs@7.8.2)':
     dependencies:
       '@graphql-typed-document-node/core': 3.2.0(graphql@16.14.0)
       '@wry/caches': 1.0.1
@@ -1246,6 +1252,8 @@ snapshots:
     optional: true
 
   '@rolldown/pluginutils@1.0.1': {}
+
+  '@rushstack/eslint-patch@1.16.1': {}
 
   '@tybys/wasm-util@0.10.2':
     dependencies:
