@@ -28,8 +28,8 @@ importers:
         specifier: ^16.14.0
         version: 16.14.0
       graphql-tag:
-        specifier: ^2.12.6
-        version: 2.12.6(graphql@16.14.0)
+        specifier: ^2.12.7
+        version: 2.12.7(graphql@16.14.0)
       vue:
         specifier: ^3.5.32
         version: 3.5.34
@@ -407,7 +407,7 @@ packages:
     resolution: {integrity: sha512-MbsRCT7mTikHwKZ0X+LVUTLRrZZRLipTuXEO9qOYO+zmjMVk81axyClMROf6uoPD9MRVu46bx8zoR0Ad9q3NAg==}
 
   '@types/jsesc@2.5.1':
-    resolution: {integrity: sha512-9VN+6yxLOPLOav+7PwjZbxiID2bVaeq0ED4qSQmdQTdjnXJSaCVKTR58t15oqH1H5t8Ng2ZX1SabJVoN9Q34bw==}
+    resolution: {integrity: sha512-9VN+6yxLOPLOav+7PwjZbxiID2bVaeq0ED4qSQmdQTdjnXJSaCVKTR58t15oqH1H5t8Ng2ZX1SabJVoN9Q34bw==, tarball: https://npm.pkg.github.com/download/@types/jsesc/2.5.1/c34defc608ec94b68dc6a12a581b440942c6d503}
 
   '@vitejs/plugin-vue@6.0.7':
     resolution: {integrity: sha512-km+p+XdSz9Sxm5rqUbqcSfZYaAniKxWBj1KURl+Jr7UaPvvX7BmaWMdP69I5rrFDeQGyxAG7NXdc57vz+snhWg==}
@@ -620,11 +620,11 @@ packages:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
     engines: {node: '>=6.9.0'}
 
-  graphql-tag@2.12.6:
-    resolution: {integrity: sha512-FdSNcu2QQcWnM2VNvSCCDCVS5PpPqpzgFT8+GXzqJuoDd0CBncxCY278u4mhRO7tMgo2JjgJA5aZ+nWSQ/Z+xg==}
+  graphql-tag@2.12.7:
+    resolution: {integrity: sha512-xnE/NFzy+0eIesvAsREJZ284zTl/wYuBAvpsFSDhRGRdRHdnE90M21Q3xAWyYInb0J756c6x0pIQ62+vtvOs1Q==}
     engines: {node: '>=10'}
     peerDependencies:
-      graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+      graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
 
   graphql@16.14.0:
     resolution: {integrity: sha512-BBvQ/406p+4CZbTpCbVPSxfzrZrbnuWSP1ELYgyS6B+hNeKzgrdB4JczCa5VZUBQrDa9hUngm0KnexY6pJRN5Q==}
@@ -1002,7 +1002,7 @@ snapshots:
       '@wry/equality': 0.5.7
       '@wry/trie': 0.5.0
       graphql: 16.14.0
-      graphql-tag: 2.12.6(graphql@16.14.0)
+      graphql-tag: 2.12.7(graphql@16.14.0)
       optimism: 0.18.1
       rxjs: 7.8.2
       tslib: 2.8.1
@@ -1583,7 +1583,7 @@ snapshots:
 
   gensync@1.0.0-beta.2: {}
 
-  graphql-tag@2.12.6(graphql@16.14.0):
+  graphql-tag@2.12.7(graphql@16.14.0):
     dependencies:
       graphql: 16.14.0
       tslib: 2.8.1
