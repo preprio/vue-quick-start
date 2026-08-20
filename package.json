@@ -24,7 +24,9 @@
     "vite-plugin-vue-devtools": "^8.1.1"
   },
   "overrides": {
-    "serialize-javascript": ">=7.0.5"
+    "serialize-javascript": ">=7.0.5",
+    "nanoid": "3.3.18",
+    "postcss": "8.5.23"
   },
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
