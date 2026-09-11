@@ -23,13 +23,6 @@
     "vite": "^8.0.16",
     "vite-plugin-vue-devtools": "^8.1.1"
   },
-  "overrides": {
-    "serialize-javascript": ">=7.0.5",
-    "nanoid": "3.3.18",
-    "postcss": "8.5.23",
-    "baseline-browser-mapping": "2.11.0",
-    "browserslist": "4.28.7"
-  },
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
@@ -46,7 +39,9 @@
       "esbuild@>=0.27.3 <0.28.1": ">=0.28.1",
       "postcss": "^8.5.23",
       "postcss@<8.5.10": ">=8.5.10",
-      "nanoid": "^3.3.18"
+      "nanoid": "^3.3.18",
+      "browserslist": "4.28.7",
+      "baseline-browser-mapping": "2.11.0"
     }
   }
 }
